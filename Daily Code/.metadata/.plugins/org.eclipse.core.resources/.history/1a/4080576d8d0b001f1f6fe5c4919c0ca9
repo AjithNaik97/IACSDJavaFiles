@@ -1,0 +1,20 @@
+package tester;
+import static utils.StudentCollectionUtils.*;
+
+import java.util.List;
+
+import com.app.core.Student;
+public class Tester {
+
+	public static void main(String[] args) {
+		System.out.println("Students form list");
+		
+		//get populated list from utis
+		List<Student> list = populateList();
+		
+		//1.1 Display all student details from a student list
+		list.forEach(p->System.out.println(p));
+
+	}
+
+}

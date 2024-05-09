@@ -1,0 +1,92 @@
+package com.cmsapp;
+
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Scanner;
+import com.utils.CMSValidations;
+import com.utils.CMSutility;
+
+import com.cms.Customer;
+import com.cms.ServicePlan;
+
+public class Tester {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		try (Scanner sc = new Scanner(System.in)) {
+			boolean exit = false;
+			List<Customer> customerList = CMSutility.populateCustomerDetails();
+			while (!exit) {
+				System.out.println(
+						"1.Sign Up 2.Sign In 3.Reset Login password 4.Unsubscribe Customer 5.Display all Details 6.Sort in ascending order of email 7.Display customer details sorted as per the dob n last name 0.Exit");
+				System.out.print("Choose your option: ");
+				try {
+					switch (sc.nextInt()) {
+					case 1:
+						System.out.println(
+								"Enter customer Details: First Name,Last Name, Email ID, Password,Registration Amount,DOB,Service Plan");
+						Customer cust = CMSValidations.validateCustomerInputs(sc.next(), sc.next(), sc.next(),
+								sc.next(), sc.nextDouble(), sc.next(), sc.next(), customerList);
+						customerList.add(cust);
+						System.out.println("Sign Up successfull.");
+						break;
+
+					case 2:
+						System.out.print("Enter email ID and Password: ");
+						Customer customer = CMSutility.authenticateCustomer(sc.next(), sc.next(), customerList);
+						System.out.println("Login Successfull!");
+						System.out.println("Your Details:" + customer);
+						break;
+
+					case 3:
+						System.out.print("Enter current Email and Password and new password: ");
+						System.out.println(CMSutility.resetPassword(sc.next(), sc.next(), sc.next(), customerList));
+						break;
+
+					case 4:
+						System.out.print("Enter email ID: ");
+						System.out.println(CMSutility.deleteCustomerDetails(sc.next(), customerList));
+						break;
+
+					case 5:
+						for (Customer c : customerList) {
+							System.out.println(c);
+						}
+						break;
+
+					case 6:
+						Collections.sort(customerList);
+						System.out.println("Sorted successfully!");
+						break;
+
+					case 7:
+						// sorting data as per desc order of dob using anonymous inner class
+						Collections.sort(customerList, new Comparator<Customer>() {
+							@Override
+							public int compare(Customer c1, Customer c2) {
+								if(c2.getDob().compareTo(c1.getDob())==0)
+								{
+									return c1.getLname().compareTo(c2.getLname());
+								}
+								return c2.getDob().compareTo(c1.getDob());
+						});
+						System.out.println("Sorted successfully!");
+						break;
+						
+					case 0:
+						exit = true;
+						System.out.println("Exiting...!");
+						break;
+					}
+				} catch (Exception e) {
+					System.out.println(e);
+					sc.nextLine();
+
+				}
+			}
+		}
+	}
+}

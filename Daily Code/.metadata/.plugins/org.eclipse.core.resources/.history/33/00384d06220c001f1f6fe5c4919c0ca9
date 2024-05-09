@@ -1,0 +1,33 @@
+package com.functional_streams;
+
+import java.util.Map;
+
+import com.app.core.Student;
+import com.app.core.Subject;
+
+import static utils.StudentCollectionUtils.*;
+public class Test4 {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		//get populated map of studentsm display all
+		Map<String, Student> studentMap=populateMap(populateList());
+		
+		//display all elements from map
+		studentMap.forEach((k,v)->System.out.println(v));
+		
+		//accept subject name from user
+		System.out.println("Enter subject name");
+		Subject chosenSubject=Subject.valueOf(sc.next().toUpperCase());
+		
+		//display passed (gpa>6) student details from a specified subject
+		studentMap.values()//collection <Student>
+		.stream() //Stream<Student> : all
+		.filter(s->s.getSubject()==chosenSubject) //Stream<Student> : of chosen subject
+		.forEach(s-> System.out.println(s););
+		
+		
+
+	}
+
+}

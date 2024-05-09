@@ -1,0 +1,17 @@
+package com.functional_streams;
+
+import java.util.stream.IntStream;
+
+public class Test5 {
+
+	public static void main(String[] args) {
+		// display sum of squares of the even nos between 1-100
+		int result= IntStream.range(1, 101) //IntStream of numbers from 1-100
+		.filter(i->i%2==0) //IntStream : evens
+		.filter(i->i*i) //IntStream : sq of evens
+		.sum(); //terminal op :reduce
+
+		System.out.println("Sum= "+result);
+	}
+
+}

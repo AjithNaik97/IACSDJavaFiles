@@ -1,0 +1,29 @@
+package com.vehicle;
+
+import java.util.Date;
+
+public class Vehicle {
+	private String chasisNo;
+	private Color color;
+	private double price;
+	private Date manufactureDate;
+	private Date insuranceexpireDate;
+	private double pollutionlevel;
+	
+	public Vehicle(String chasisNo,Color color,double price,Date manufactureDate,Date insuranceexpireDate,double pollutionlevel)
+	{
+		this.chasisNo=chasisNo;
+		this.color=color;
+		this.price=price;
+		this.manufactureDate=manufactureDate;
+		this.insuranceexpireDate=insuranceexpireDate;
+		this.pollutionlevel=pollutionlevel;
+	}
+	
+	@Override
+	public String toString() {
+		return "Vehicle [chasisNo=" + chasisNo + ", color=" + color + ", price=" + price + ", manufactureDate="
+				+ manufactureDate + ", insuranceexpireDate=" + insuranceexpireDate + ", pollutionlevel="
+				+ pollutionlevel + "]";
+	}
+}

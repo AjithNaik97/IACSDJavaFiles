@@ -1,0 +1,72 @@
+package com.utils;
+
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.appexceptions.CMSException;
+import com.cms.Customer;
+import com.cms.ServicePlan;
+
+public class CMSutility {
+	
+	//add a method to check for dup customer(by email)
+	public static void checkForDupCustomer(String email, List<Customer> customerList) throws CMSException
+	{
+		//1. Create customer class instance wrapping pk
+		Customer newCust =new Customer(email);
+		if(customerList.contains(newCust))
+			throw new CMSException("Dup Email!!!");
+	}
+	public static Customer authenticateCustomer(String email,String password,List<Customer>list) throws CMSException
+	{
+		//1. Find IndexOf
+		//2.
+		
+		Customer cust=new Customer(email);
+		int index=list.indexOf(cust);
+		if(index==-1)
+			throw new CMSException("Invalid Email, login failed!");
+		Customer customer=list.get(index);
+		if(customer.getPassword().equals(password))
+			return customer;
+		throw new CMSException("Invalid Password, login failed!");
+	}
+	
+	public static String resetPassword(String email,String password,String npassword, List<Customer> list) throws CMSException
+	{
+		Customer cust=authenticateCustomer(email, password, list);
+		cust.setPassword(npassword);
+		return "Password reset successful!";
+	}
+	public static String deleteCustomerDetails(String email,List<Customer>list) throws CMSException
+	{
+		Customer cust=new Customer(email);
+		int index=list.indexOf(cust);
+		if(index==-1)
+			throw new CMSException("No matching customer details!");
+		list.remove(index);
+		return "Customer Details successfully removed!";
+	}
+	
+	public static List<Customer> populateCustomerDetails()
+	{
+		Customer c1 =new Customer("Ajith","Naik","aj@gmail.com","123",1000,LocalDate.parse("1997-08-10"),ServicePlan.SILVER);
+		Customer c2 =new Customer("Anup","Shetty","as@gmail.com","123",5000,LocalDate.parse("1996-04-10"),ServicePlan.DIAMOND);
+		Customer c3 =new Customer("Kunal","Raval","ks@gmail.com","123",2000,LocalDate.parse("1999-10-10"),ServicePlan.GOLD);
+		Customer c4 =new Customer("Harshal","Kubde","hk@gmail.com","123",1000,LocalDate.parse("1999-12-10"),ServicePlan.SILVER);
+		Customer c5 =new Customer("Gaurav","Gawande","gg@gmail.com","123",10000,LocalDate.parse("1998-06-10"),ServicePlan.PLATINUM);
+		Customer [] ct= {c1,c2,c3,c4,c5};
+		List<Customer> list= new ArrayList<>();
+		for(Customer c:ct)
+			list.add(c);
+		return list;
+	}
+	
+	@SuppressWarnings("unused")
+	private static String validatePasswordFormat(String password) throws CMSException {
+		if(password.matches("((?=.*\\d)(?=.*[a-z])(?=.*[#@$*]).{5,20})"))
+			throw new CMSException("Password not Strong enough!");
+		return password;
+	}
+}

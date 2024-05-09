@@ -1,0 +1,9 @@
+package custom_exception;
+
+public class IOException extends Exception {
+	public IOException (String mesg) {
+		super(mesg);
+	}
+	
+	
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="code/day3.1/src"/>
+	<classpathentry kind="src" path="code/day3.2_banking/src"/>
+	<classpathentry kind="src" path="day3_help"/>
+	<classpathentry kind="output" path="code/day3.1/bin"/>
+</classpath>

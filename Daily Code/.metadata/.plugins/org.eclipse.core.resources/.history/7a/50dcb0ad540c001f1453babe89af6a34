@@ -1,0 +1,11 @@
+package com.functional_streams;
+import utils.StudentCollectionUtil,populateList;
+
+public class Test6 {
+
+	public static void main(String[] args) {
+		Map<String,Student> studentMap=populateMap(populateList);
+
+	}
+
+}

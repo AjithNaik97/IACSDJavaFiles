@@ -1,0 +1,13 @@
+package com.utils;
+
+import com.vexceptions.VehicleExceptions;
+import static com.vehiclevalidations.Vehiclevalidations.validatePollution;
+public class VehicleUtils {
+	public static String driveVehicle(int km) throws VehicleExceptions
+	{
+		if(km>150)
+			validatePollution(20);
+		return "Driving Vehicle for "+km+" kilometers.." ;
+		
+	}
+}

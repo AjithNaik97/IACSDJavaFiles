@@ -1,0 +1,19 @@
+package com.functional_streams;
+
+import java.util.Map;
+
+import com.app.core.Student;
+import static utils.StudentCollectionUtils.*;
+public class Test4 {
+
+	public static void main(String[] args) {
+		//get populated map of studentsm display all
+		Map<String, Student> studentMap=populateMap(populateList());
+		
+		//display all elements from map
+		studentMap.forEach((k,v)->System.out.println(v));
+		
+
+	}
+
+}

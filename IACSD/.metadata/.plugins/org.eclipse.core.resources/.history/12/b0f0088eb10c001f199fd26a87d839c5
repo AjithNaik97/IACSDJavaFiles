@@ -1,0 +1,18 @@
+package com.vehiclevalidations;
+
+import java.util.Date;
+
+import com.vehicle.Color;
+import com.vehicle.Vehicle;
+
+public class Vehiclevalidations {
+	public static Vehicle validateInputs(String chasisNo, String color, double price, String manufactureDate,
+			String insuranceexpireDate, double pollutionlevel) {
+		Color vcolor=Color.valueOf(color);
+		Local
+
+		return new Vehicle(chasisNo, vcolor, price, vmanufactureDate, vinsuranceexpireDate, vpollutionlevel);
+
+	}
+
+}

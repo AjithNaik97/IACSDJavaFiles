@@ -1,0 +1,17 @@
+package com.thread1;
+
+public class Tester {
+
+	public static void main(String[] args) {
+		// Display details of the main thread(name,prior,thread group)
+		System.out.println(Thread.currentThread()); //toString --Thread(main,5,main)
+		//Create multiple child threads (extends Thread)
+		MyClass t1=new MyClass("one");
+		MyClass t2=new MyClass("two");
+		MyClass t3=new MyClass("three");
+		MyClass t4=new MyClass("four");
+		
+		//how many runnable threads?
+	}
+
+}

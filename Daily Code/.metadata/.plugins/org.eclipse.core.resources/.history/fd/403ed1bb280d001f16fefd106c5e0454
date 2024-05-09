@@ -1,0 +1,33 @@
+package com.thread1;
+
+public class Tester {
+
+	public static void main(String[] args) throws InterruptedException {
+		// Display details of the main thread(name,prior,thread group)
+		System.out.println(Thread.currentThread()); //toString --Thread(main,5,main)
+		//Create multiple child threads (extends Thread)
+		MyClass t1=new MyClass("one");
+		MyClass t2=new MyClass("two");
+		MyClass t3=new MyClass("three");
+		MyClass t4=new MyClass("four");
+		
+		//how many runnable threads? 1(main)
+		t1.start();
+		t2.start();
+		t3.start();
+		t4.start();
+		
+		//how many runnable threads? 1(main)+=4(child)
+		System.out.println(t1.isAlive()+" "+t4.isAlive());
+		
+		for (int i = 0; i < 10; i++) {
+			System.out.println(Thread.currentThread().getName() + " exec count");
+			Thread.sleep(1000);
+		}
+		System.out.println(t1.isAlive()+" "+t4.isAlive());
+		System.out.println("main over.........");
+
+		
+	}
+
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.arrayassignments.Operations"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="com.cms.Customer"/>
+    <fullyQualifiedTypeName name="com.utils.CMSValidations"/>
+    <fullyQualifiedTypeName name="java.lang.Comparable"/>
+    <fullyQualifiedTypeName name="java.util.Collections"/>
+    <fullyQualifiedTypeName name="com.cms.ServicePlan"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="com.utils.CMSutility"/>
+    <fullyQualifiedTypeName name="com.appexceptions.CMSException"/>
+    <fullyQualifiedTypeName name="java.lang.IllegalAccessError"/>
+    <fullyQualifiedTypeName name="java.io.IOException"/>
+    <fullyQualifiedTypeName name="java.util.stream.Stream"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="com.vehicle.Vehicle"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="com.vexceptions.VehicleExceptions"/>
+    <fullyQualifiedTypeName name="com.vehiclevalidations.Vehiclevalidations"/>
+    <fullyQualifiedTypeName name="com.utils.VehicleUtils"/>
+</qualifiedTypeNameHistroy>

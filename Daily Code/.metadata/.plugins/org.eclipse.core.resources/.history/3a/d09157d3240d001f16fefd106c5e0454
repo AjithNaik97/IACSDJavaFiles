@@ -1,0 +1,13 @@
+package com.thread1;
+
+public class MyClass extends Thread {
+	
+	//override run()
+	public void run() {
+		System.out.println(getName()+" started");
+		//B.L
+		System.out.println(getName()+" over");
+
+	}
+
+}
