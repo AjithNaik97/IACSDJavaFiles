@@ -18,7 +18,7 @@ public class TestLayeredJDBCApp {
 			boolean exit = false;
 			while (!exit) {
 				System.out.println("Options 1. Login \n" + "2 : Display user details by DoB\n"
-						+ "3. Voter registration \n" + "4. Update Password \n" + "0.Exit");
+						+ "3. Voter registration \n" + "4. Update Password \n" +"5. Delete user\n"+ "0.Exit");
 				try {
 					switch (sc.nextInt()) {
 					case 1: // login
@@ -49,7 +49,11 @@ public class TestLayeredJDBCApp {
 						break;
 						
 					case 5:
-						System.out.println("Enter the");
+						System.out.println("Enter the voter ID");
+						
+						
+						
+						break;
 					case 0:
 						exit = true;
 						// destroy (shutdown/terminate app)
