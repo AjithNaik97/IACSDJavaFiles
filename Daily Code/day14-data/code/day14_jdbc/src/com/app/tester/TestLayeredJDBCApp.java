@@ -48,6 +48,8 @@ public class TestLayeredJDBCApp {
 						System.out.println(userDao.updatePass(sc.next(), sc.next(), sc.next()));
 						break;
 						
+					case 5:
+						System.out.println("Enter the");
 					case 0:
 						exit = true;
 						// destroy (shutdown/terminate app)
