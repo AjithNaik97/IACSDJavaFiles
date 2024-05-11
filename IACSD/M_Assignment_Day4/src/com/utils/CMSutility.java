@@ -3,6 +3,7 @@ package com.utils;
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import com.appexceptions.CMSException;
@@ -79,5 +80,17 @@ public class CMSutility {
 		Period age=Period.between(birthDate,LocalDate.now());
 		if(age.getYears()<18)
 			throw new CMSException("Not old enough!");
+	}
+	public static void removePlan(String chosenPlan, String date,List<Customer> customerlist) {
+		ServicePlan vchosenPlan=ServicePlan.valueOf(chosenPlan.toUpperCase());
+		LocalDate vdate=LocalDate.parse(date);
+		Iterator<Customer> custItr=customerlist.iterator();
+		while(custItr.hasNext())
+		{
+			Customer c=custItr.next();
+			if(c.getPlan()==vchosenPlan && c.getDob().isAfter(vdate))
+				custItr.remove();
+		}
+		
 	}
 }

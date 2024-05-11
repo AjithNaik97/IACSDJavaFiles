@@ -71,6 +71,14 @@ public class Customer implements Comparable<Customer> {
 	public String getLname() {
 		return lname;
 	}
+
+	public ServicePlan getPlan() {
+		return plan;
+	}
+
+	public void setPlan(ServicePlan plan) {
+		this.plan = plan;
+	}
 	
 	
 }

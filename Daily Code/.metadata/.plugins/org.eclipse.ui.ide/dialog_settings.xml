@@ -108,6 +108,9 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="D:\IACSD\IACSDJavaFiles\Daily Code\day2-data\code\day2.1"/>
+			<item value="D:\IACSD\IACSDJavaFiles\Daily Code\day1-data\code\day1.1"/>
+			<item value="D:\IACSD\IACSDJavaFiles\Daily Code"/>
 			<item value="D:\IACSD\JAVA\Daily Code\day5-data\code"/>
 			<item value="D:\IACSD\JAVA\Daily Code\day4-data"/>
 			<item value="D:\IACSD\JAVA\Daily Code\day2-data"/>
@@ -122,6 +125,7 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="D:\IACSD\IACSDJavaFiles\Daily Code\day13-data\code"/>
 			<item value="D:\IACSD\JAVA\Daily Code\day12-data\code"/>
 			<item value="D:\IACSD\JAVA\Daily Code\day10-data\code"/>
 			<item value="D:\IACSD\JAVA\Daily Code\day9-data\code\day9.1"/>

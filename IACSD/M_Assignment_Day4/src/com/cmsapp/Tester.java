@@ -80,8 +80,8 @@ public class Tester {
 						
 					case 8:
 						System.out.println("Enter Plan and Date:");
-						removalop
-						
+						CMSutility.removePlan(sc.next(),sc.next(),customerList);	
+						System.out.println("Successfully removed!");
 						break;
 					
 					case 0:
