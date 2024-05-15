@@ -11,7 +11,7 @@ import com.app.entities.User;
 public class UserDaoImpl implements UserDao {
 	// state
 	private Connection cn;
-	private PreparedStatement pst1, pst2, pst3, pst4;
+	private PreparedStatement pst1, pst2, pst3, pst4,pst5;
 
 	// def ctor of the DAO layer
 	public UserDaoImpl() throws SQLException {
@@ -26,10 +26,11 @@ public class UserDaoImpl implements UserDao {
 		 * id | first_name | last_name | email | password | dob | status | role
 		 */
 		pst3 = cn.prepareStatement("insert into users values(default,?,?,?,?,?,?,?)");
-		System.out.println("user dao created...");
-
 		// pst3 : update password
 		pst4 = cn.prepareStatement("update users set password=? where email=? and password=? and role='voter'");
+		//pts4:delete user
+		pst5=cn.prepareStatement("delete from users where id=?");
+		System.out.println("user dao created...");
 	}
 
 	@Override
@@ -84,6 +85,7 @@ public class UserDaoImpl implements UserDao {
 			return "Voter registered....";
 		return "Voter registration failed !";
 	}
+	
 
 	// to update password
 	public String updatePass(String email, String old_password, String new_password) throws SQLException {
@@ -97,6 +99,16 @@ public class UserDaoImpl implements UserDao {
 		return "Password update un-successfull";
 
 	}
+	
+	//to delete a user
+	public String deleteUser(int id) throws SQLException
+	{
+		pst5.setInt(1, id);
+		int check=pst5.executeUpdate();
+		if(check==1)
+			return "User successfully deleted!";
+		return "User not found!";
+	}
 
 	// add clean up method to close DB resources
 	public void cleanUp() throws SQLException {
@@ -109,6 +121,8 @@ public class UserDaoImpl implements UserDao {
 			pst3.close();
 		if (pst4 != null)
 			pst4.close();
+		if (pst5 != null)
+			pst5.close();
 		closeConnection();
 	}
 

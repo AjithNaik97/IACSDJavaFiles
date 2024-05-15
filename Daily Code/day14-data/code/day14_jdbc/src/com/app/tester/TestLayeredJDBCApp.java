@@ -4,6 +4,7 @@ import java.sql.Date;
 import java.util.List;
 import java.util.Scanner;
 
+import com.app.dao.AccountDaoImpl;
 import com.app.dao.UserDaoImpl;
 import com.app.entities.User;
 
@@ -15,10 +16,12 @@ public class TestLayeredJDBCApp {
 			// created dao instance (i.e Tester :
 			// dependent is creating it's own dependency)
 			UserDaoImpl userDao = new UserDaoImpl();
+			AccountDaoImpl accountDao = new AccountDaoImpl();
 			boolean exit = false;
 			while (!exit) {
-				System.out.println("Options 1. Login \n" + "2 : Display user details by DoB\n"
-						+ "3. Voter registration \n" + "4. Update Password \n" + "0.Exit");
+				System.out.println(
+						"Options\n1 : Login \n" + "2 : Display user details by DoB\n" + "3 : Voter registration \n"
+								+ "4 : Update Password \n" + "5 : Delete user detail \n" + "0 : Exit");
 				try {
 					switch (sc.nextInt()) {
 					case 1: // login
@@ -47,9 +50,15 @@ public class TestLayeredJDBCApp {
 						System.out.println("Enter email, old password and new password:");
 						System.out.println(userDao.updatePass(sc.next(), sc.next(), sc.next()));
 						break;
-						
+
 					case 5:
-						System.out.println("Enter the");
+						System.out.println("Enter the voter id of user to be deleted:");
+						System.out.println(userDao.deleteUser(sc.nextInt()));
+						break;
+
+					case 6:
+
+						break;
 					case 0:
 						exit = true;
 						// destroy (shutdown/terminate app)
