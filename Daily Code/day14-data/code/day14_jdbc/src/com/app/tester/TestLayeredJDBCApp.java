@@ -19,9 +19,14 @@ public class TestLayeredJDBCApp {
 			AccountDaoImpl accountDao = new AccountDaoImpl();
 			boolean exit = false;
 			while (!exit) {
+<<<<<<< HEAD
 				System.out.println(
 						"Options\n1 : Login \n" + "2 : Display user details by DoB\n" + "3 : Voter registration \n"
 								+ "4 : Update Password \n" + "5 : Delete user detail \n" + "0 : Exit");
+=======
+				System.out.println("Options 1. Login \n" + "2 : Display user details by DoB\n"
+						+ "3. Voter registration \n" + "4. Update Password \n" +"5. Delete user\n"+ "0.Exit");
+>>>>>>> 5ff5bdedd6e00d178f6a847387d40e7064c4904a
 				try {
 					switch (sc.nextInt()) {
 					case 1: // login
@@ -52,12 +57,19 @@ public class TestLayeredJDBCApp {
 						break;
 
 					case 5:
+<<<<<<< HEAD
 						System.out.println("Enter the voter id of user to be deleted:");
 						System.out.println(userDao.deleteUser(sc.nextInt()));
 						break;
 
 					case 6:
 
+=======
+						System.out.println("Enter the voter ID");
+						
+						
+						
+>>>>>>> 5ff5bdedd6e00d178f6a847387d40e7064c4904a
 						break;
 					case 0:
 						exit = true;

@@ -10,7 +10,7 @@ public class DBUtils {
 	static {
 		DB_URL = "jdbc:mysql://localhost:3306/iacsd_mar24";
 		USER_NAME = "root";
-		PASSWORD = "iacsd123";
+		PASSWORD = "root123";
 	}
 
 	public static Connection openConnection() 

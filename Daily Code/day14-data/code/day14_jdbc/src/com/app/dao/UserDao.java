@@ -16,6 +16,11 @@ public interface UserDao {
 	String voterRegistration(User newVoter) throws SQLException;
 	//update Password
 	String updatePass(String email, String old_password, String new_password) throws SQLException;
+<<<<<<< HEAD
 	//delete user details
 	String deleteUser(int id) throws SQLException;
+=======
+	
+	
+>>>>>>> 5ff5bdedd6e00d178f6a847387d40e7064c4904a
 }
