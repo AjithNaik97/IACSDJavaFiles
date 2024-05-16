@@ -14,13 +14,18 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class TestServlet
  */
-@WebServlet("/hello")
+
 /*
  * Run time annotation, class level, mandatory annotation meant for Webcontainer(WC)
  * when you deploy a web app, WC creates a Map
  * key-url pattern
- * value--F.Q
+ * value--F.Q[Fully Qualified] servlet class name(web_pages.TestServlet)
+ * URl--https://host (localhost) :port (8080)/day1_lab/hello http--app layer
+ * protocol (scheme) host--DNS qualified host name(www.abc.com) or IP Address
+ * port--TCP port no(def port-8080) URL(Uniform Resource Identifier)--/day1_lab
+ *hello--URL Pattern
  */
+@WebServlet("/hello")
 public class TestServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 

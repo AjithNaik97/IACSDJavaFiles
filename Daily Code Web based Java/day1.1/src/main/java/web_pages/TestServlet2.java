@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class TestServlet
  */
-@WebServlet("/hello2")
+//@WebServlet("/hello2")
 /*
  * Run time annotation, class level, mandatory annotation meant for Webcontainer(WC)
  * when you deploy a web app, WC creates a Map
