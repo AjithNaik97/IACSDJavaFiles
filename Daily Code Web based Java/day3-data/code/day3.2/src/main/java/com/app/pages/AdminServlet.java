@@ -11,9 +11,11 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.app.dao.CandidateDaoImpl;
 import com.app.entities.Candidate;
+import com.app.entities.User;
 
 /**
  * Servlet implementation class AdminServlet
@@ -57,6 +59,15 @@ public class AdminServlet extends HttpServlet {
 			pw.print("<table border=1px><tr><td>Party</td><td>Votes</td></tr>");
 			admin.getPartyWiseVotes().forEach((key,value)->pw.print("<tr><td>"+key+"</td><td>"+value+"</td></tr>"));
 			pw.print("</table>");
+			
+			HttpSession session=request.getSession();
+			User adminuser=(User)session.getAttribute("user_info");
+			
+			pw.print("<h5>"+adminuser.getFirstName()+" logged out.</h5>");
+			pw.print("<marquee><h4><u>Visit Again</u></h4></marquee>");
+			//Discarding session
+			
+			session.invalidate();
 			
 		}
 		catch(Exception e)
