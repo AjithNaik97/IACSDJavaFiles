@@ -21,7 +21,7 @@
 		</init-param>
 		<init-param>
 			<param-name>password</param-name>
-			<param-value>root123</param-value>
+			<param-value>iacsd123</param-value>
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
@@ -43,7 +43,7 @@
 		</init-param>
 		<init-param>
 			<param-name>password</param-name>
-			<param-value>root123</param-value>
+			<param-value>iacsd123</param-value>
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
