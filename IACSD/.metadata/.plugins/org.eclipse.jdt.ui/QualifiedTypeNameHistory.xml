@@ -41,7 +41,11 @@
     <fullyQualifiedTypeName name="com.app.dao.PatientDaoImpl"/>
     <fullyQualifiedTypeName name="javax.servlet.ServletException"/>
     <fullyQualifiedTypeName name="javax.servlet.ServletConfig"/>
-    <fullyQualifiedTypeName name="com.app.utils.DBUtils"/>
     <fullyQualifiedTypeName name="java.lang.Exception"/>
     <fullyQualifiedTypeName name="java.io.PrintWriter"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
+    <fullyQualifiedTypeName name="com.app.entities.Appointment"/>
+    <fullyQualifiedTypeName name="java.sql.Time"/>
+    <fullyQualifiedTypeName name="java.sql.Date"/>
+    <fullyQualifiedTypeName name="com.app.utils.DBUtils"/>
 </qualifiedTypeNameHistroy>

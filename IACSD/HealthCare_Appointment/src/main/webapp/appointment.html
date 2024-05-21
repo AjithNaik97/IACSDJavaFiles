@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="appoint" method="post">
+		<table border=2px margin="auto">
+			<tr>
+				<th colspan=2>Schedule Appointment</th>
+			</tr>
+			<tr>
+				<td>Patient Name:</td>
+				<td><input type="text" id="name" name="name"></td>
+			</tr>
+			<tr>
+				<td>Doctor Name:</td>
+				<td><select name="doctor" id="doc">
+						<option value="Mayuri">Mayuri</option>
+						<option value="Shriya">Shriya</option>
+					</select></td>
+			</tr>
+			<tr>
+				<td>Date of Appointment:</td>
+				<td><input type="date" name="doa"></td>
+			</tr>
+			<tr>
+				<td>Time of Appointment</td>
+				<td><select id="time" name="time">
+						<option value="09:30">09:30 AM</option>
+						<option value="10:00">10:00 AM</option>
+						<option value="10:30">10:30 AM</option>
+						<option value="11:00">11:00 AM</option>
+						<option value="11:30">11:30 AM</option>
+						<option value="12:00">12:00 PM</option>
+						<option value="12:30">12:30 PM</option>
+						<option value="18:00">06:00 PM</option>
+						<option value="18:30">06:30 PM</option>
+						<option value="19:00">07:00 PM</option>
+						<option value="19:30">07:30 PM</option>
+						<option value="20:00">08:00 PM</option>
+						<option value="20:30">08:30 PM</option>
+				</select></td>
+			</tr>
+			<tr>
+				<th colspan=2 align="left"><input type="submit" value="Submit"></th>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

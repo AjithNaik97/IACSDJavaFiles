@@ -9,6 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.app.dao.PatientDaoImpl;
 import com.app.entities.Patient;
@@ -17,22 +18,20 @@ import com.app.utils.*;
 /**
  * Servlet implementation class LoginServlet
  */
-@WebServlet(value="/login", loadOnStartup = 1 )
 public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private PatientDaoImpl patientDao;
 
-    /**
-     * Default constructor. 
-     */
-    public LoginServlet() {
-       
-    }
-
+	public LoginServlet() {
+		System.out.println("in def ctor ");
+		System.out.println("config " + getServletConfig());// null
+	}
+	
 	/**
 	 * @see Servlet#init(ServletConfig)
 	 */
-	public void init(ServletConfig config) throws ServletException {
+    @Override 
+	public void init() throws ServletException {
 		ServletConfig config1=getServletConfig();
 		 try {
 			 	DBUtils.openConnection(config1.getInitParameter("db_url"), config1.getInitParameter("user_name"), config1.getInitParameter("password"));
@@ -69,12 +68,17 @@ public class LoginServlet extends HttpServlet {
 			String email=request.getParameter("em");
 			String password=request.getParameter("pass");
 			Patient patient=patientDao.signin(email, password);
+			
 			if(patient==null) {
 				pw.print("<h4>Invalid Login Credentials.</h4><br>");
 				pw.print("<a href='index.html'>Retry</a>");
 			}else
 			{
-				pw.print(patient);
+				HttpSession session= request.getSession();
+				session.setAttribute("patient_details", patient);
+				session.setAttribute("patient_dao", patientDao);
+				pw.print("<h4> Hello, "+patient.getName());
+				pw.print("<h5><a href='appointment.html'>Create Appointment</a></h5>");
 			}
 		}
 		catch (Exception e) {

@@ -8,7 +8,7 @@ import java.sql.SQLException;
 public class DBUtils {
 	private static Connection connection;
 	
-	public static void openConnection (String DB_URL, String USER_NAME, String PASSWORD) throws SQLException, ClassNotFoundException{
+	public static void openConnection(String DB_URL, String USER_NAME, String PASSWORD) throws SQLException, ClassNotFoundException{
 		connection=DriverManager.getConnection(DB_URL, USER_NAME, PASSWORD);
 	}
 

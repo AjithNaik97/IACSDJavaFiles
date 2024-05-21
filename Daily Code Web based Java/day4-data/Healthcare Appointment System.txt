@@ -23,3 +23,8 @@ Notes:
 
 •	There should not be conflicting appointments, for example – more than one appointment with same doctor on same date & time.
 
+create table appointment(
+aid int primary key auto_increment,
+pname varchar(20),
+dname varchar(20),
+doa date,
