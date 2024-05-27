@@ -1,0 +1,15 @@
+/1. Get session from session factory using current session
+		Session session=getFactory().getCurrentSession();
+		
+		//2. Begin a Tx
+		Transaction tx=session.beginTransaction();
+		try {
+			
+		}
+		catch(RuntimeException e)
+		{
+			if(tx!=null)
+				tx.rollback();
+			//re throw the exc to the caller
+			throw e;
+		}
