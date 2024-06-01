@@ -2,6 +2,7 @@ package com.app.entities;
 
 import java.time.LocalDate;
 
+import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -19,8 +20,10 @@ public class BaseEntity {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	@CreationTimestamp //adds current date when the entity is created(only once!)
+	
 	private LocalDate creationDate;
 	@UpdateTimestamp//adds the current date every time the entity is updated
+	
 	private LocalDate updatedOn;
 	public BaseEntity() {
 		// TODO Auto-generated constructor stub
