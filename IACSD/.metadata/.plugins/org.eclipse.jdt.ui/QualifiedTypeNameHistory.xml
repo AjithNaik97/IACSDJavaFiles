@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="com.arrayassignments.Operations"/>
-    <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="com.cms.Customer"/>
     <fullyQualifiedTypeName name="com.utils.CMSValidations"/>
     <fullyQualifiedTypeName name="java.lang.Comparable"/>
     <fullyQualifiedTypeName name="java.util.Collections"/>
     <fullyQualifiedTypeName name="com.cms.ServicePlan"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="com.utils.CMSutility"/>
     <fullyQualifiedTypeName name="java.lang.IllegalAccessError"/>
     <fullyQualifiedTypeName name="java.io.IOException"/>
     <fullyQualifiedTypeName name="com.vehicle.Vehicle"/>
-    <fullyQualifiedTypeName name="java.time.LocalDate"/>
     <fullyQualifiedTypeName name="com.vexceptions.VehicleExceptions"/>
     <fullyQualifiedTypeName name="com.vehiclevalidations.Vehiclevalidations"/>
     <fullyQualifiedTypeName name="com.utils.VehicleUtils"/>
@@ -48,4 +45,19 @@
     <fullyQualifiedTypeName name="java.sql.Time"/>
     <fullyQualifiedTypeName name="java.sql.Date"/>
     <fullyQualifiedTypeName name="com.app.utils.DBUtils"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="javax.management.remote.SubjectDelegationPermission"/>
+    <fullyQualifiedTypeName name="com.exceptions.CustomException"/>
+    <fullyQualifiedTypeName name="com.app.validations.Validations"/>
+    <fullyQualifiedTypeName name="com.app.enumclass.Brand"/>
+    <fullyQualifiedTypeName name="com.app.enumclass.Inkcolor"/>
+    <fullyQualifiedTypeName name="java.lang.Runtime"/>
+    <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="com.app.entity.Status"/>
+    <fullyQualifiedTypeName name="com.app.utils.TaskUtils"/>
+    <fullyQualifiedTypeName name="com.app.exceptions.CustomException"/>
+    <fullyQualifiedTypeName name="com.app.entity.Tasks"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
 </qualifiedTypeNameHistroy>
