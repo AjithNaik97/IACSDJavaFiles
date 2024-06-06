@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="com.arrayassignments.Operations"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
-    <fullyQualifiedTypeName name="com.cms.Customer"/>
     <fullyQualifiedTypeName name="com.utils.CMSValidations"/>
     <fullyQualifiedTypeName name="java.lang.Comparable"/>
-    <fullyQualifiedTypeName name="java.util.Collections"/>
     <fullyQualifiedTypeName name="com.cms.ServicePlan"/>
     <fullyQualifiedTypeName name="com.utils.CMSutility"/>
     <fullyQualifiedTypeName name="java.lang.IllegalAccessError"/>
@@ -57,7 +53,11 @@
     <fullyQualifiedTypeName name="com.app.entity.Status"/>
     <fullyQualifiedTypeName name="com.app.utils.TaskUtils"/>
     <fullyQualifiedTypeName name="com.app.exceptions.CustomException"/>
-    <fullyQualifiedTypeName name="com.app.entity.Tasks"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="com.app.entity.Tasks"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="java.util.Collection"/>
+    <fullyQualifiedTypeName name="java.util.Collections"/>
+    <fullyQualifiedTypeName name="com.app.customordering.TasksDateComparator"/>
 </qualifiedTypeNameHistroy>

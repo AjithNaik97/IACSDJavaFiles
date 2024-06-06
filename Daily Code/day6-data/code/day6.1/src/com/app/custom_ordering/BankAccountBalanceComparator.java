@@ -13,6 +13,5 @@ public class BankAccountBalanceComparator implements Comparator<BankAccount> {
 		if (a1.getBalance() == a2.getBalance())
 			return 0;
 		return 1;
-
 	}
 }

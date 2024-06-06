@@ -1,9 +1,11 @@
 package com.app.TaskManager;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
+import com.app.customordering.TasksDateComparator;
 import com.app.entity.Tasks;
 import com.app.utils.TaskUtils;
 
@@ -47,6 +49,9 @@ public class Tester {
 						break;
 
 					case 6:
+						Collections.sort(tasks, new TasksDateComparator());
+						System.out.println("Successfully sorted");
+						System.out.println(tasks);
 						break;
 
 					default:
