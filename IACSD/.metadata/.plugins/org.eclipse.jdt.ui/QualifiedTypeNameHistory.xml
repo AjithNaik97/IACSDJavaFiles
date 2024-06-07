@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="com.utils.CMSValidations"/>
     <fullyQualifiedTypeName name="java.lang.Comparable"/>
     <fullyQualifiedTypeName name="com.cms.ServicePlan"/>
     <fullyQualifiedTypeName name="com.utils.CMSutility"/>
@@ -21,7 +20,6 @@
     <fullyQualifiedTypeName name="com.app.core.Subject"/>
     <fullyQualifiedTypeName name="com.threads.SortbyDob"/>
     <fullyQualifiedTypeName name="java.util.Map"/>
-    <fullyQualifiedTypeName name="java.util.HashMap"/>
     <fullyQualifiedTypeName name="com.threads.SortByGpa"/>
     <fullyQualifiedTypeName name="java.lang.ClassNotFoundException"/>
     <fullyQualifiedTypeName name="java.sql.Driver"/>
@@ -60,4 +58,6 @@
     <fullyQualifiedTypeName name="java.util.Collection"/>
     <fullyQualifiedTypeName name="java.util.Collections"/>
     <fullyQualifiedTypeName name="com.app.customordering.TasksDateComparator"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="com.app.entity.Cricketer"/>
 </qualifiedTypeNameHistroy>
