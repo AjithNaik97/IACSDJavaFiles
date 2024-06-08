@@ -1,5 +1,7 @@
 package com.app.entity;
 
+import java.util.Objects;
+
 public class Cricketer {
 	private String name;
 	private int age;
@@ -54,6 +56,23 @@ public class Cricketer {
 
 	public void setRating(int rating) {
 		this.rating = rating;
+	}
+	
+	@Override
+	public int hashCode() {
+		return Objects.hash(email_id);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Cricketer other = (Cricketer) obj;
+		return Objects.equals(email_id, other.email_id);
 	}
 
 	@Override
