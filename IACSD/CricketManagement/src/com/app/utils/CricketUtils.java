@@ -31,9 +31,10 @@ public class CricketUtils {
 		throw new CustomException("No such cricketer exists!");
 	}
 
-	public static void sortByRating(Map<String, Cricketer> cmap) {
+	public static List<Cricketer> sortByRating(Map<String, Cricketer> cmap) {
 		List<Cricketer> clist = new LinkedList<>(cmap.values());
 		Collections.sort(clist, new CricketerComparatorByRating());
+		return clist;
 		
 	}
 }

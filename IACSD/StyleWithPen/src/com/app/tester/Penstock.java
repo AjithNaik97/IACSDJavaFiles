@@ -17,7 +17,7 @@ public class Penstock {
 			while(!exists)
 			{
 				System.out.println("-----Menu-----");
-				System.out.println("1.Add new Pen \n2.Update stock of a Pen\n3.Set discount of 20% for all the pens which are not at all sold in last 3 months\n4.Remove Pens which arenever sold once listed in 9 months");
+				System.out.println("1.Add new Pen \n2.Update stock of a Pen\n3.Set discount of 20% for all the pens which are not at all sold in last 3 months\n4.Remove Pens which are never sold once listed in 9 months");
 				System.out.println("Enter your choice: ");
 				switch(sc.nextInt())
 				{
