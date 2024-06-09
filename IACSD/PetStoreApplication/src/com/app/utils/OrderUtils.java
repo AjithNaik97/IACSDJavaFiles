@@ -3,6 +3,7 @@ package com.app.utils;
 import java.util.List;
 
 import com.app.customexception.AuthorizationException;
+import com.app.customexception.CustomException;
 import com.app.customexception.OutOfStockException;
 import com.app.entities.Order;
 import com.app.entities.Pet;
@@ -11,7 +12,7 @@ import com.app.enums.Status;
 public class OrderUtils {
 
 	public static Order placeOrder(int petId, int qty, List<Pet> petlist)
-			throws OutOfStockException, AuthorizationException {
+			throws OutOfStockException, CustomException {
 		Pet p = new Pet(petId);
 		int index = petlist.indexOf(p);
 		Pet pet = petlist.get(index);
@@ -23,20 +24,20 @@ public class OrderUtils {
 			}
 			throw new OutOfStockException("Pet not in stock");
 		}
-		throw new AuthorizationException("No such Pet exits!");
+		throw new CustomException("No such Pet exits!");
 	}
 
-	public static Order checkOrder(int orderId, List<Order> orderlist) throws AuthorizationException {
+	public static Order checkOrder(int orderId, List<Order> orderlist) throws CustomException {
 		Order o = new Order(orderId);
 		int index = orderlist.indexOf(o);
 		if (index != -1) {
 			return orderlist.get(index);
 		}
-		throw new AuthorizationException("No such order exists!");
+		throw new CustomException("No such order exists!");
 
 	}
 
-	public static String updateStatus(int orderId, String status, List<Order> orderlist,int u) throws AuthorizationException{
+	public static String updateStatus(int orderId, String status, List<Order> orderlist,int u) throws CustomException,AuthorizationException{
 		if(u==0)
 		{
 			Order o = new Order(orderId);
@@ -47,7 +48,7 @@ public class OrderUtils {
 				order.setStatus(vstatus);
 				return "Status successfully updated!";
 			}
-			throw new AuthorizationException("No such order exists!");
+			throw new CustomException("No such order exists!");
 		}
 		throw new AuthorizationException("No authroziation to update order status!");
 	}
