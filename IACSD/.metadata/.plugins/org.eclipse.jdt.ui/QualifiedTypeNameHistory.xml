@@ -1,17 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="com.appexceptions.CMSException"/>
-    <fullyQualifiedTypeName name="com.app.core.Student"/>
-    <fullyQualifiedTypeName name="utils.StudentCollectionUtils"/>
-    <fullyQualifiedTypeName name="java.util.Comparator"/>
-    <fullyQualifiedTypeName name="java.util.stream.Stream"/>
-    <fullyQualifiedTypeName name="utils.IOUtils"/>
-    <fullyQualifiedTypeName name="com.app.core.Subject"/>
-    <fullyQualifiedTypeName name="com.threads.SortbyDob"/>
-    <fullyQualifiedTypeName name="java.util.Map"/>
-    <fullyQualifiedTypeName name="com.threads.SortByGpa"/>
-    <fullyQualifiedTypeName name="java.lang.ClassNotFoundException"/>
-    <fullyQualifiedTypeName name="java.sql.Driver"/>
     <fullyQualifiedTypeName name="java.sql.DriverManager"/>
     <fullyQualifiedTypeName name="java.sql.Connection"/>
     <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
@@ -21,7 +9,6 @@
     <fullyQualifiedTypeName name="com.app.dao.PatientDaoImpl"/>
     <fullyQualifiedTypeName name="javax.servlet.ServletException"/>
     <fullyQualifiedTypeName name="javax.servlet.ServletConfig"/>
-    <fullyQualifiedTypeName name="java.lang.Exception"/>
     <fullyQualifiedTypeName name="java.io.PrintWriter"/>
     <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
     <fullyQualifiedTypeName name="com.app.entities.Appointment"/>
@@ -44,20 +31,33 @@
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="com.app.utils.Validations"/>
     <fullyQualifiedTypeName name="java.lang.Runtime"/>
-    <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
     <fullyQualifiedTypeName name="com.app.entity.Cricketer"/>
     <fullyQualifiedTypeName name="com.app.exception.CustomException"/>
     <fullyQualifiedTypeName name="com.app.utils.CricketUtils"/>
     <fullyQualifiedTypeName name="com.customordering.CricketerComparatorByRating"/>
     <fullyQualifiedTypeName name="java.lang.Override"/>
-    <fullyQualifiedTypeName name="java.util.Collections"/>
     <fullyQualifiedTypeName name="com.app.enums.Status"/>
     <fullyQualifiedTypeName name="com.app.enums.Category"/>
-    <fullyQualifiedTypeName name="java.time.LocalDate"/>
     <fullyQualifiedTypeName name="com.app.customexception.CustomException"/>
     <fullyQualifiedTypeName name="com.app.customexception.AuthorizationException"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.lang.Exception"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
+    <fullyQualifiedTypeName name="com.app.entity.EmpType"/>
+    <fullyQualifiedTypeName name="com.app.utils.EmployeeUtils"/>
+    <fullyQualifiedTypeName name="com.app.customeexception.CustomException"/>
+    <fullyQualifiedTypeName name="java.util.Collections"/>
+    <fullyQualifiedTypeName name="java.util.Comparator"/>
     <fullyQualifiedTypeName name="com.app.entity.Employee"/>
+    <fullyQualifiedTypeName name="com.app.customordering.EmployeeSortingByDoj"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="com.item.customexception.CustomException"/>
+    <fullyQualifiedTypeName name="java.io.ObjectOutputStream"/>
+    <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
+    <fullyQualifiedTypeName name="com.item.entity.Item"/>
+    <fullyQualifiedTypeName name="java.io.ObjectInputStream"/>
+    <fullyQualifiedTypeName name="java.io.FileInputStream"/>
+    <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
 </qualifiedTypeNameHistroy>
