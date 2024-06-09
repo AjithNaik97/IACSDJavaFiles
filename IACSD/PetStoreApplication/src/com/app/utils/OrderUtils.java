@@ -15,9 +15,9 @@ public class OrderUtils {
 			throws OutOfStockException, CustomException {
 		Pet p = new Pet(petId);
 		int index = petlist.indexOf(p);
-		Pet pet = petlist.get(index);
 		if (index != -1) {
-			if (pet.getStocks()-qty != 0) {
+			Pet pet = petlist.get(index);
+			if (pet.getStocks()-qty >= 0) {
 				int s=pet.getStocks();
 				pet.setStocks(s-qty);
 				return new Order(petId, qty);

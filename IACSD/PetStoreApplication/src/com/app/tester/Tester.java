@@ -16,7 +16,7 @@ public class Tester {
 		try (Scanner sc = new Scanner(System.in)) {
 			List<Pet> petlist = new ArrayList<>();
 			List<Order> orderlist = new ArrayList<>();
-			int u=-1;
+			int u = -1;
 			boolean exit = false;
 			int a;
 			while (!exit) {
@@ -29,21 +29,23 @@ public class Tester {
 					switch (sc.nextInt()) {
 					case 1:
 						System.out.println("Enter login ID and password:");
-						 u= Validation.loginValidation(sc.next(), sc.next());
+						u = Validation.loginValidation(sc.next(), sc.next());
 						System.out.println("Login successfull!");
 						break;
 
 					case 2:
 						// petId, name, category, unitPrice, stocks
 						System.out.println("Enter Pet ID, Name, Category, Unit Price, Stocks.");
-						Pet p= PetUtils.addPet(sc.nextInt(),sc.next(),sc.next(),sc.nextDouble(),sc.nextInt(),u);
+						Pet p = Validation.inputValidations(sc.nextInt(), sc.next(), sc.next(), sc.nextDouble(),
+								sc.nextInt(), u, petlist);
 						petlist.add(p);
 						System.out.println("Pet data added successfully!");
 						break;
 
 					case 3:
 						System.out.println("Enter petID and details to be updated:");
-						System.out.println(PetUtils.updateDetails(sc.nextInt(),sc.next(),sc.next(),sc.nextDouble(),sc.nextInt(),u,petlist));
+						System.out.println(PetUtils.updateDetails(sc.nextInt(), sc.next(), sc.next(), sc.nextDouble(),
+								sc.nextInt(), u, petlist));
 						break;
 
 					case 4:
@@ -53,21 +55,21 @@ public class Tester {
 					case 5:
 						System.out.println("Enter the details of the pet:");
 						System.out.println("PetId, Quantity");
-						 Order o= OrderUtils.placeOrder(sc.nextInt(),sc.nextInt(),petlist);
-						 orderlist.add(o);
-						 System.out.println("Order placed successfully!");
-						 System.out.println("Here's your order ID: "+o.getOrderId());
+						Order o = OrderUtils.placeOrder(sc.nextInt(), sc.nextInt(), petlist);
+						orderlist.add(o);
+						System.out.println("Order placed successfully!");
+						System.out.println("Here's your order ID: " + o.getOrderId());
 						break;
 
 					case 6:
 						System.out.print("Enter Order ID:");
-						Order o1=OrderUtils.checkOrder(sc.nextInt(),orderlist);
+						Order o1 = OrderUtils.checkOrder(sc.nextInt(), orderlist);
 						System.out.println(o1.getStatus());
 						break;
 
 					case 7:
 						System.out.println("Enter orderId and Status to be updated:");
-						System.out.println(OrderUtils.updateStatus(sc.nextInt(),sc.next(),orderlist,u));
+						System.out.println(OrderUtils.updateStatus(sc.nextInt(), sc.next(), orderlist, u));
 						break;
 
 					case 8:

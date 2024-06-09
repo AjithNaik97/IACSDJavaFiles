@@ -1,17 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.io.IOException"/>
-    <fullyQualifiedTypeName name="com.vehicle.Vehicle"/>
-    <fullyQualifiedTypeName name="com.vexceptions.VehicleExceptions"/>
-    <fullyQualifiedTypeName name="com.vehiclevalidations.Vehiclevalidations"/>
-    <fullyQualifiedTypeName name="com.utils.VehicleUtils"/>
-    <fullyQualifiedTypeName name="java.util.Iterator"/>
     <fullyQualifiedTypeName name="com.appexceptions.CMSException"/>
     <fullyQualifiedTypeName name="com.app.core.Student"/>
     <fullyQualifiedTypeName name="utils.StudentCollectionUtils"/>
     <fullyQualifiedTypeName name="java.util.Comparator"/>
     <fullyQualifiedTypeName name="java.util.stream.Stream"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="utils.IOUtils"/>
     <fullyQualifiedTypeName name="com.app.core.Subject"/>
     <fullyQualifiedTypeName name="com.threads.SortbyDob"/>
@@ -44,8 +37,6 @@
     <fullyQualifiedTypeName name="com.app.entity.Status"/>
     <fullyQualifiedTypeName name="com.app.utils.TaskUtils"/>
     <fullyQualifiedTypeName name="com.app.exceptions.CustomException"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
-    <fullyQualifiedTypeName name="java.time.LocalDate"/>
     <fullyQualifiedTypeName name="com.app.entity.Tasks"/>
     <fullyQualifiedTypeName name="java.util.Collection"/>
     <fullyQualifiedTypeName name="com.app.customordering.TasksDateComparator"/>
@@ -60,4 +51,13 @@
     <fullyQualifiedTypeName name="com.customordering.CricketerComparatorByRating"/>
     <fullyQualifiedTypeName name="java.lang.Override"/>
     <fullyQualifiedTypeName name="java.util.Collections"/>
+    <fullyQualifiedTypeName name="com.app.enums.Status"/>
+    <fullyQualifiedTypeName name="com.app.enums.Category"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="com.app.customexception.CustomException"/>
+    <fullyQualifiedTypeName name="com.app.customexception.AuthorizationException"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="com.app.entity.Employee"/>
 </qualifiedTypeNameHistroy>
