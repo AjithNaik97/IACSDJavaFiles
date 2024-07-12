@@ -26,6 +26,10 @@ public class Tasks {
 		taskId = tid;
 	}
 
+	public Tasks(String name) {
+		this.taskName=name;
+	}
+
 	public int getTaskId() {
 		return taskId;
 	}
@@ -74,20 +78,29 @@ public class Tasks {
 		this.active = active;
 	}
 
-	@Override
-	public boolean equals(Object o) {
-		if (this == o)
-			return true;
-		if (o == null || getClass() != o.getClass())
-			return false;
-		Tasks tasks = (Tasks) o;
-		return taskId == tasks.taskId;
-	}
+	
 
 //    @Override
 //    public int hashCode() {
 //        return Objects.hash(taskId);
 //    }
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(taskId, taskName);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Tasks other = (Tasks) obj;
+		return taskId == other.taskId || Objects.equals(taskName, other.taskName);
+	}
 
 	@Override
 	public String toString() {

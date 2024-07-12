@@ -33,6 +33,7 @@ public class TaskUtils {
 		if(index==-1)
 			throw new CustomException("No such task exists!");
 		Tasks task=tasks.get(index);
+	
 		task.setStatus(vstatus);
 		return "Task status updated successfully";
 	}
@@ -61,6 +62,42 @@ public class TaskUtils {
 			}
 		}
 		return resultTasks;
+	}
+
+	public static String checkstatus(List<Tasks> tasks, String status) throws CustomException{
+		for(Status s:Status.values()) {
+			if(s.name().equalsIgnoreCase(status)) {
+				return "Valid status";
+			}
+		}
+		throw new CustomException("Invalid status");
+		
+	}
+
+	public static String setactive(String name, List<Tasks> tasks)throws CustomException {
+//		for(Tasks t:tasks) {
+//			if(t.getTaskName().equals(name)) {
+//				t.setActive(false);
+//				return "set successfully";
+//			}
+//		}
+//		throw new CustomException("Invalid ");
+		
+		Tasks t=new Tasks(name);
+		int index=tasks.indexOf(t);
+		if(index==-1)
+			throw new CustomException("Invalid name");
+		Tasks tk=tasks.get(index);
+		tk.setActive(false);
+		return "set succesfully";
+		
+	}
+
+	public static String checkDuplicate(int Id, List<Tasks> tasks)throws CustomException {
+		Tasks t=new Tasks(Id);
+		if(tasks.contains(t))
+			throw new CustomException("Duplicate Id found");
+		return "No Duplicate Id found";
 	}
 
 }

@@ -53,14 +53,28 @@ public class Tester {
 						System.out.println("Successfully sorted");
 						System.out.println(tasks);
 						break;
-
+					case 7:
+						System.out.println("Enter status:");
+						System.out.println(TaskUtils.checkstatus(tasks,sc.next()));
+						break;
+					case 8:
+						System.out.println("Enter name");
+						System.out.println(TaskUtils.setactive(sc.next(),tasks));
+						break;
+						
+					case 9:
+						System.out.println("Enter id");
+						System.out.println(TaskUtils.checkDuplicate(sc.nextInt(),tasks));
+						break;
+						
 					default:
 						System.out.println("Invalid Input!");
 						break;
 					}
 				}
 			} catch (Exception e) {
-				e.printStackTrace();
+				sc.nextLine();
+				System.out.println(e);
 			}
 		}
 

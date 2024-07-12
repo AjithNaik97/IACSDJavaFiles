@@ -125,6 +125,7 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\IACSD\IACSDJavaFiles\Daily Code"/>
 			<item value="C:\IACSDJavaFiles\Daily Code"/>
 			<item value="D:\IACSD\IACSDJavaFiles\Daily Code\day14-data\code\day14_jdbc"/>
 			<item value="D:\IACSD\IACSDJavaFiles\Daily Code\day13-data\code"/>
